@@ -2,3 +2,37 @@
 	background #F6F6F6
 	.img-logo
 		height 6em
+	&-nav
+		background #007DAD
+		.nav-items
+			padding 1em 1.3em
+			cursor pointer
+			color white
+			transition .5s background ease
+		.nav-items:hover
+			background black
+
+.welcome-container
+	figure
+		background-image url("http://www.kebuena.com.mx/wp-content/uploads/2015/10/imagen-18.jpg")
+		background-size cover
+		background-repeat no-repeat
+		height 32.5em
+	&-info
+		display flex
+		justify-content center
+		align-items flex-end
+		justify-content space-around
+		figcaption
+			background rgba(32, 172, 185, 0.69)
+			padding 1.5em 1em
+			margin-top -10em
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h3
+				font-size 3em
+				text-transform capitalize
+				margin-bottom .2em
+			p
+				text-align justify
