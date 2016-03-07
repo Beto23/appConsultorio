@@ -14,6 +14,11 @@ module.exports = function (ngApp){
 				controllerAs:'app',
 				controller:'HomeCtrl'
 			})
-
+			.state('login',{
+				url: '/login',
+				template: require('./app/login/login.html'),
+				controllerAs:'login',
+				controller:'LoginCtrl'
+			})
 	}
 }
