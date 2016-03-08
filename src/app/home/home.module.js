@@ -3,4 +3,5 @@ module.exports = function(){
 	require('./home.controller')(home);
 	require('./header/header.directive')(home);
 	require('./welcome/welcome.directive')(home);
+	require('./footer/footer.directive')(home);
 }
