@@ -16,9 +16,22 @@ module.exports = function (ngApp){
 			})
 			.state('login',{
 				url: '/login',
-				template: require('./app/login/login.html'),
+				template: require('./app/main/login/login.html'),
 				controllerAs:'login',
 				controller:'LoginCtrl'
 			})
+			.state('main',{
+				url: '/buena-salud',
+				abstract: true,
+				template: require('./app/main/main.html')
+			})
+				.state('main.secretaria',{
+					url: '/secretaria',
+					template: require('./app/main/secretaria/secretaria.html')
+				})
+				.state('main.doctor',{
+					url: '/doctor',
+					template: require('./app/main/doctor/doctor.html')
+				})
 	}
 }
