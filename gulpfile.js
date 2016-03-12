@@ -52,7 +52,7 @@ var config = {
 	scripts:{
 		main: './src/index.js',
 		output: './dist',
-		watch: ['./src/**/**/*.js','./src/**/**/*.html']
+		watch: ['./src/**/**/**/*.js','./src/**/**/**/*.html']
 	},
 	images: {
 		main: ['./src/img/**/*.jpg','./src/img/**/*.png'],
@@ -104,8 +104,8 @@ gulp.task('css', function(){
 
 
 var js_opts = assign(
-	{}, 
-	watchify.args, 
+	{},
+	watchify.args,
 	{
 		entries:config.scripts.main,
 		transform: [stringify({
