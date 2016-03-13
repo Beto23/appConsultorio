@@ -29,6 +29,22 @@ module.exports = function (ngApp){
 					url: '/secretaria',
 					template: require('./app/main/secretaria/secretaria.html')
 				})
+					.state('main.secretaria.consultas',{
+						url: '/consultas',
+						template: require('./app/main/secretaria/consultas/consultas.html')
+					})
+					.state('main.secretaria.doctores',{
+						url: '/doctores',
+						template: require('./app/main/secretaria/doctores/doctores.html')
+					})
+					.state('main.secretaria.pacientes',{
+						url: '/pacientes',
+						template: require('./app/main/secretaria/pacientes/pacientes.html')
+					})
+					.state('main.secretaria.expedientes',{
+						url: '/expediente',
+						template: require('./app/main/secretaria/expedientes/expedientes.html')
+					})
 				.state('main.doctor',{
 					url: '/doctor',
 					template: require('./app/main/doctor/doctor.html')
