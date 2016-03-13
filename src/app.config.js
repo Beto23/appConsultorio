@@ -27,7 +27,8 @@ module.exports = function (ngApp){
 			})
 				.state('main.secretaria',{
 					url: '/secretaria',
-					template: require('./app/main/secretaria/secretaria.html')
+					template: require('./app/main/secretaria/secretaria.html'),
+					controller: 'SecretariaCtrl'
 				})
 					.state('main.secretaria.consultas',{
 						url: '/consultas',
