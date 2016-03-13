@@ -31,8 +31,17 @@ module.exports = function (ngApp){
 				})
 					.state('main.secretaria.consultas',{
 						url: '/consultas',
-						template: require('./app/main/secretaria/consultas/consultas.html')
+						template: require('./app/main/secretaria/consultas/consultas.html'),
+						controller:'ConsultasCtrl'
 					})
+						.state('main.secretaria.consultas.postConsulta',{
+							url: '/post_consulta',
+							template: require('./app/main/secretaria/consultas/postConsultas/postConsultas.html')
+						})
+						.state('main.secretaria.consultas.getConsultas',{
+							url: '/get_consultas',
+							template: require('./app/main/secretaria/consultas/getConsultas/getConsultas.html')
+						})
 					.state('main.secretaria.doctores',{
 						url: '/doctores',
 						template: require('./app/main/secretaria/doctores/doctores.html')
