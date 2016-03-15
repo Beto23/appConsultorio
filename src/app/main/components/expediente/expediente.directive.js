@@ -8,7 +8,8 @@ module.exports = function (ngModule){
       scope: {
         idUsuario: '@'
       },
-      template: require('./expediente.html')
+      template: require('./expediente.html'),
+      controller: 'ExpedienteCtrl'
     };
   }
 }
