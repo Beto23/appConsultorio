@@ -50,8 +50,17 @@ module.exports = function (ngApp){
 					})
 					.state('main.secretaria.pacientes',{
 						url: '/pacientes',
+						abstract: true,
 						template: require('./app/main/secretaria/pacientes/pacientes.html')
 					})
+						.state('main.secretaria.pacientes.getPacientes',{
+							url: '/get_pacientes',
+							template: require('./app/main/secretaria/pacientes/getPacientes/getPacientes.html')
+						})
+						.state('main.secretaria.pacientes.postPacientes',{
+							url: '/post_pacientes',
+							template: require('./app/main/secretaria/pacientes/postPacientes/postPacientes.html')
+						})
 					.state('main.secretaria.expedientes',{
 						url: '/expediente',
 						template: require('./app/main/secretaria/expedientes/expedientes.html')
