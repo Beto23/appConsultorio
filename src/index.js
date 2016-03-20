@@ -14,3 +14,4 @@ require('./app/home/home.module')();
 require('./helpers/helpers.module')();
 require('./app/main/main.module')();
 require('./app.config')(app);
+require('./app.constants')(app);
