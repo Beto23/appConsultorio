@@ -32,18 +32,16 @@ module.exports = function (ngApp){
 				})
 					.state('main.secretaria.consultas',{
 						url: '/consultas',
-						abstract : true,
-						template: require('./app/main/secretaria/consultas/consultas.html'),
-						controller:'ConsultasCtrl'
+						template: require('./app/main/components/consulta/listado/listado.html'),
+						controller:'ConsultaListadoCtrl',
+						controllerAs:'vm',
+						resolve: {
+							arrConsultas: function(ConsultaService){
+								return ConsultaService.getConsultas();
+							}
+						}
 					})
-						.state('main.secretaria.consultas.postConsulta',{
-							url: '/post_consulta',
-							template: require('./app/main/secretaria/consultas/postConsultas/postConsultas.html')
-						})
-						.state('main.secretaria.consultas.getConsultas',{
-							url: '/get_consultas',
-							template: require('./app/main/secretaria/consultas/getConsultas/getConsultas.html')
-						})
+
 					.state('main.secretaria.doctores',{
 						url: '/doctores',
 						template: require('./app/main/secretaria/doctores/doctores.html')
