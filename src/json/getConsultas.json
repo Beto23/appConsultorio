@@ -1,0 +1,16 @@
+[
+  {
+    "id" : 0,
+    "paciente" : "beto",
+    "doctor" : "esau",
+    "fecha" : "2016-03-20",
+    "hora" : "03:00"
+  },
+    {
+      "id" : 1,
+      "paciente" : "roro",
+      "doctor" : "chicharo",
+      "fecha" : "2016-03-21",
+      "hora" : "04:00"
+    }
+]
