@@ -5,11 +5,13 @@ require('../node_modules/bootstrap/dist/js/bootstrap.js')
 
 var app = angular.module('appConsultorio', [
   'ui.router',
+  'ui.bootstrap',
   'Helpers',
   'appConsultorio.home',
   'appConsultorio.login',
   'appConsultorio.main'
 ]);
+require('../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js')
 require('./app/home/home.module')();
 require('./helpers/helpers.module')();
 require('./app/main/main.module')();
