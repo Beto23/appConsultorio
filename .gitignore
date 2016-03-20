@@ -1,6 +1,6 @@
 dist
 node_modules
-bower_commponents
+bower_components
 src/app.js
 src/app.css
 docs

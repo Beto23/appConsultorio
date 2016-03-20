@@ -2,6 +2,7 @@ var angular = require('angular');
 require ('angular-ui-router');
 window.$ = window.jQuery = require('jquery');
 require('../node_modules/bootstrap/dist/js/bootstrap.js')
+require('../bower_components/angular-ui-clock/dist/angular-clock.js');
 
 var app = angular.module('appConsultorio', [
   'ui.router',
