@@ -1,7 +1,10 @@
-<div class="container-postConsulta login-container-form row middle-xs center-xs">
-  <button type="button" name="button" ng-click="vm.on = false;">cerrar</button>
-  <form class="col-xs-6">
-    <div class="row between-xs">
+<div class="container-postConsulta login-container-form row top-xs center-xs">
+  <form class="col-xs-7">
+    <div class="popup-encabezado row">
+      <h4 class="col-xs-11">Agregar Consulta</h4>
+      <i class="fa fa-times" ng-click="vm.on = false;"></i>
+    </div>
+    <div class="row between-xs form-inputs">
       <div class="col-xs-5">
         <div class="form-group">
           <label for="">Paciente</label>
@@ -38,8 +41,9 @@
         </div>
       </div>
     </div>
-    <div class="boton-login">
-      <button class="btn btn-success" ng-click="vm.functionSelected();">{{vm.optionFormulario.buttonSubmit}}</button>
+    <div class="form-buttons">
+      <button class="btn btn-default" ng-click="vm.on = false;">Cancelar</button>
+      <button class="btn btn-primary" ng-click="vm.functionSelected();">{{vm.optionFormulario.buttonSubmit}}</button>
     </div>
   </form>
 </div>
