@@ -1,11 +1,12 @@
-<div class="container-postConsulta login-container-form">
-  <form>
+<div class="container-postConsulta login-container-form row middle-xs center-xs">
+  <button type="button" name="button" ng-click="vm.on = false;">cerrar</button>
+  <form class="col-xs-6">
     <div class="row between-xs">
       <div class="col-xs-5">
         <div class="form-group">
           <label for="">Paciente</label>
-          <select class="form-control" id="sel1" required placeholder="Paciente">
-            <option>1</option>
+          <select class="form-control" id="sel1" required placeholder="Paciente" ng-disabled="vm.paciente">
+            <option selected>{{vm.paciente.paciente}}</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
@@ -14,7 +15,7 @@
         <div class="form-group">
           <label for="">Doctor</label>
           <select class="form-control" id="sel1" required>
-            <option>1</option>
+            <option selected>{{vm.paciente.doctor}}</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
@@ -24,21 +25,21 @@
       <div class="col-xs-5">
         <div class="form-group">
           <label for="">Fecha</label>
-          <input type="date" class="form-control" required>
+          <input type="date" value="{{vm.paciente.fecha}}" class="form-control" required>
         </div>
         <div class="form-group">
           <label for="">Hora</label>
           <select class="form-control" id="sel1" required>
             <option>1:00</option>
             <option>2:00</option>
-            <option>3:00</option>
+            <option selected>{{vm.paciente.hora}}</option>
             <option>4:00</option>
           </select>
         </div>
       </div>
     </div>
     <div class="boton-login">
-      <button class="btn btn-success">Agregar</button>
+      <button class="btn btn-success" ng-click="vm.functionSelected();">{{vm.optionFormulario.buttonSubmit}}</button>
     </div>
   </form>
 </div>

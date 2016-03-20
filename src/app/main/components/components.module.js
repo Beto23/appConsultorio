@@ -3,5 +3,7 @@ module.exports = function (){
   require('./expediente/expediente.directive')(components);
   require('./expediente/expediente.controller')(components);
   require('./headerSignin/headerSignin.directive')(components);
+  require('./consulta/consulta')(components);
+
 
 }
