@@ -10,8 +10,10 @@ module.exports = function(ngModule){
 
     if(vm.paciente){
       vm.optionFormulario.buttonSubmit = 'Editar'
+      vm.optionFormulario.encabezadoTittle = 'Editar Consulta'
     } else {
       vm.optionFormulario.buttonSubmit = 'Agregar'
+      vm.optionFormulario.encabezadoTittle = 'Agregar Consulta'
     }
 
 
