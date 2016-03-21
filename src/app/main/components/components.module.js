@@ -3,4 +3,8 @@ module.exports = function (){
   require('./headerSignin/headerSignin.directive')(components);
   require('./consulta/consulta')(components);
   require('./expediente/expediente')(components);
+  require('./clock/clock')(components);
+
+
+
 }
