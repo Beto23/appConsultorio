@@ -4,6 +4,7 @@ module.exports = function (){
   require('./expediente/expediente.controller')(components);
   require('./headerSignin/headerSignin.directive')(components);
   require('./consulta/consulta')(components);
+  require('./clock/clock')(components);
 
 
 }
