@@ -4,7 +4,8 @@ module.exports = function(ngModule){
   function antecedentesPersonales (){
     var directive = {
       restrict: 'E',
-      template: require('./antecedentesPersonales.html')
+      template: require('./antecedentesPersonales.html'),
+      controller: 'AntPersoCtrl'
     }
     return directive;
   }
