@@ -3,4 +3,5 @@ module.exports = function(ngModule){
   require('./expConsultas/expConsultas.directive')(ngModule);
   require('./antecedentesPersonales/antecedentesPersonales.directive')(ngModule);
   require('./antecedentesPersonales/antecedentesPersonales.controller')(ngModule);
+  require('./expConsultas/expConsultas.controller')(ngModule);
 }
