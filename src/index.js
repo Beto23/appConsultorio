@@ -12,7 +12,7 @@ var app = angular.module('appConsultorio', [
   'appConsultorio.login',
   'appConsultorio.main'
 ]);
-require('../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js')
+require('angular-ui-bootstrap');
 require('./app/home/home.module')();
 require('./helpers/helpers.module')();
 require('./app/main/main.module')();
