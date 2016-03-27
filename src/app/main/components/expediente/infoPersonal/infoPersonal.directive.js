@@ -4,7 +4,10 @@ module.exports = function(ngModule){
   function infoPersonal (){
     var directive = {
       restrict: 'E',
-      template: require('./infoPersonal.html')
+      template: require('./infoPersonal.html'),
+      bindToController: true,
+      controller: 'InfoPersoCtrl',
+      controllerAs: 'vm'
     }
     return directive;
   }
