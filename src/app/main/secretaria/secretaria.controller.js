@@ -3,15 +3,6 @@ module.exports = function (ngModule){
   /*@ngInject*/
   function SecretariaCtrl (){
 
-    /*Funcionalidad boton desplegable*/
-    var btn_menu = $('#menu-consulta');
-
-    btn_menu.click(function(event){
-      console.log('SecretariaCtrl')
-      $('.container-opciones-menu').toggleClass('container-opciones-menu-mobile')
-      $('.container-opciones-container').toggleClass('col-xs-12')
-    })
-
     /*Funcionalidad de menu*/
     var menu_item1 = $('#menu-item1');
     var menu_item2 = $('#menu-item2');
