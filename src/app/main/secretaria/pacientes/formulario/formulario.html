@@ -1,5 +1,9 @@
 <div class="container-paciente">
   <div class="info-personal info-personal-secre row between-xs">
+    <div class="encabezado-addPaciente col-xs-12">
+      <h3><b>Agregar Paciente</b></h3>
+      <hr>
+    </div>
     <div class="foto-expediente col-xs-2">
       <figure></figure>
     </div>
@@ -55,9 +59,11 @@
            <input type="email"  value="{{vm.paciente.correo}}" require class="form-control" required id="exampleInputName2" placeholder="betoo@example.com">
         </div>
       </div>
-      <hr>
-      <button class="btn btn-default" ng-click="vm.open = false;">Cancelar</button>
-      <button class="btn btn-primary">Agregar</button>
+      <div class="col-xs-12">
+        <hr>
+        <button class="btn btn-default" ng-click="vm.open = false;">Cancelar</button>
+        <button class="btn btn-primary">Agregar</button>
+      </div>
     </form>
   </div>
 </div>
