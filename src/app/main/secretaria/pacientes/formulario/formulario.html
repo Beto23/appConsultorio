@@ -1,7 +1,7 @@
 <div class="container-paciente">
   <div class="info-personal info-personal-secre row between-xs">
     <div class="encabezado-addPaciente col-xs-12">
-      <h3><b>Agregar Paciente</b></h3>
+      <h3><b>{{vm.optionFormulario.encabezadoTittle}}</b></h3>
       <hr>
     </div>
     <div class="foto-expediente col-xs-2">
@@ -62,7 +62,7 @@
       <div class="col-xs-12">
         <hr>
         <button class="btn btn-default" ng-click="vm.open = false;">Cancelar</button>
-        <button class="btn btn-primary">Agregar</button>
+        <button class="btn btn-primary" ng-click="vm.functionSelected();">{{vm.optionFormulario.buttonSubmit}}</button>
       </div>
     </form>
   </div>
