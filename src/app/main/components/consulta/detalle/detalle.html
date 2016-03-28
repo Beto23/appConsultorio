@@ -1,0 +1,34 @@
+<div class="container-postConsulta login-container-form row top-xs center-xs">
+  <form class="col-xs-7">
+    <div class="popup-encabezado row">
+      <h4 class="col-xs-11">Detalle de Consulta</h4>
+      <i class="fa fa-times" ng-click="vm.open = false;"></i>
+    </div>
+    <div class="row between-xs form-inputs">
+      <div class="col-xs-5">
+        <div class="form-group">
+          <label for="">Motivo de Consulta</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="">Sintomas</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="col-xs-5">
+        <div class="form-group">
+          <label for="">Diagnostico</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="">Medicamento Recetado</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="form-buttons">
+      <button class="btn btn-default" ng-click="vm.open = false;">Cancelar</button>
+      <button class="btn btn-primary" ng-click="vm.functionSelected();">Agregar</button>
+    </div>
+  </form>
+</div>
