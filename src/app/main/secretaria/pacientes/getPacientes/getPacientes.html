@@ -11,31 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Jose Alberto</td>
-          <td>Cordoba</td>
-          <td>Lugo</td>
-          <td>
-            <i class="fa fa-ban"></i>
-            <i class="fa fa-pencil"></i>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Giovanna Alejandra</td>
-          <td>Lucio</td>
-          <td>Vazquez</td>
-          <td>
-            <i class="fa fa-ban"></i>
-            <i class="fa fa-pencil"></i>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Edna Cecilia</td>
-          <td>Eguia</td>
-          <td>Eguia</td>
+        <tr ng-repeat="paciente in vm.pacientes">
+          <td>{{paciente.id}}</td>
+          <td>{{paciente.nombre}}</td>
+          <td>{{paciente.paterno}}</td>
+          <td>{{paciente.materno}}</td>
           <td>
             <i class="fa fa-ban"></i>
             <i class="fa fa-pencil"></i>

@@ -50,15 +50,17 @@ module.exports = function (ngApp){
 						url: '/pacientes',
 						abstract: true,
 						template: require('./app/main/secretaria/pacientes/pacientes.html'),
-						controller: 'PacienteSecreCtrl'
 					})
 						.state('main.secretaria.pacientes.getPacientes',{
 							url: '/get_pacientes',
-							template: require('./app/main/secretaria/pacientes/getPacientes/getPacientes.html')
-						})
-						.state('main.secretaria.pacientes.postPacientes',{
-							url: '/post_pacientes',
-							template: require('./app/main/secretaria/pacientes/postPacientes/postPacientes.html')
+							template: require('./app/main/secretaria/pacientes/getPacientes/getPacientes.html'),
+							controller: 'PacientesListadoCtrl',
+							controllerAs: 'vm',
+							resolve: {
+								arrPacientes: function(PacienteService){
+									return PacienteService.getPacientes();
+								}
+							}
 						})
 					.state('main.secretaria.expedientes',{
 						url: '/expediente',
