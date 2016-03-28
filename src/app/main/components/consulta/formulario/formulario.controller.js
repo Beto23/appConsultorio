@@ -19,18 +19,18 @@ module.exports = function(ngModule){
 
     function functionSelected(){
       if(vm.paciente){
-        editarPaciente();
+        editarConsulta();
       } else {
-        agregarPaciente();
+        agregarConsulta();
       }
     }
 
-    function editarPaciente(){
-      console.log('editarPaciente');
+    function editarConsulta(){
+      console.log('editarConsulta');
     }
 
-    function agregarPaciente(){
-      console.log('agregarPaciente');
+    function agregarConsulta(){
+      console.log('agregarConsulta');
     }
   }
 }
