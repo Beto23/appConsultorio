@@ -22,15 +22,17 @@
             <td>{{paciente.materno}}</td>
             <td>
               <i class="fa fa-ban"></i>
-              <i class="fa fa-pencil"></i>
+              <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOpen = true;"></i>
             </td>
           </tr>
         </tbody>
       </table>
-      <button type="button" class="btn btn-primary"  ng-click="vm.formularioOpen = true;" name="button">Agregar Paciente</button>
+      <button type="button" class="btn btn-primary"  ng-click="vm.formularioOpen = true; vm.pacienteSelected = null;" name="button">Agregar Paciente</button>
       <paciente-formulario
         ng-if="vm.formularioOpen"
-        open="vm.formularioOpen"></paciente-formulario>
+        open="vm.formularioOpen"
+        paciente="vm.pacienteSelected"
+        ></paciente-formulario>
     </div>
   </section>
 </section>
