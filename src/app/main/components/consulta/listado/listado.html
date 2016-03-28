@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="paciente in vm.pacientes">
+          <tr ng-repeat="paciente in vm.pacientes" ng-click="vm.formularioOpen = true;">
             <td>{{paciente.paciente}}</td>
             <td>{{paciente.doctor}}</td>
             <td>{{paciente.hora}}</td>
@@ -34,4 +34,8 @@
     ng-if="vm.formularioOn"
     on="vm.formularioOn"
     paciente="vm.pacienteSelected"></consulta-formulario>
+
+  <detalle-consulta
+    ng-if="vm.formularioOpen"
+    open="vm.formularioOpen"></detalle-consulta>
 </section>
