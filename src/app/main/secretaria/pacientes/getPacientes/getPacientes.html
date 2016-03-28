@@ -43,5 +43,9 @@
         </tr>
       </tbody>
     </table>
+    <button type="button" class="btn btn-primary"  ng-click="vm.formularioOpen = true;" name="button">Agregar Paciente</button>
+    <paciente-formulario
+      ng-if="vm.formularioOpen"
+      open="vm.formularioOpen"></paciente-formulario>
   </div>
 </section>
