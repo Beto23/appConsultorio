@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 1,
+    "nombre" : "Juana",
+    "paterno" : "Lugo",
+    "materno" : "Corpus"
+  },
+  {
+    "id" : 2,
+    "nombre" : "Giovanna Alejandra",
+    "paterno" : "Lucio",
+    "materno" : "Vazquez"
+  },
+  {
+    "id" : 3,
+    "nombre" : "Carlos Eduardo",
+    "paterno" : "Cordoba",
+    "materno" : "Lugo"
+  }
+]
