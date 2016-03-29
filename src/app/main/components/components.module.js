@@ -5,7 +5,5 @@ module.exports = function (){
   require('./consulta/consulta')(components);
   require('./expediente/expediente')(components);
   require('./clock/clock')(components);
-
-
-
+  require('./pacientes/pacientes')(components);
 }

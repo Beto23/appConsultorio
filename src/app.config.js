@@ -48,7 +48,7 @@ module.exports = function (ngApp){
 					})
 					.state('main.secretaria.pacientes',{
 						url: '/pacientes',
-						template: require('./app/main/secretaria/pacientes/getPacientes/getPacientes.html'),
+						template: require('./app/main/components/pacientes/listado/listado.html'),
 						controller: 'PacientesListadoCtrl',
 						controllerAs: 'vm',
 						resolve: {
