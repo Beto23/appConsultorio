@@ -1,0 +1,29 @@
+[
+  {
+    "id" : 1,
+    "nombre" : "Robin",
+    "paterno" : "Hod",
+    "materno" : "War",
+    "email" : "robin_09@hotmai.com",
+    "telefono" : "844-292-35-33",
+    "especialidad" : "neurologo"
+  },
+  {
+    "id" : 2,
+    "nombre" : "Michael",
+    "paterno" : "Jordan",
+    "materno" : "Air",
+    "email" : "jordan_09@hotmai.com",
+    "telefono" : "844-292-35-33",
+    "especialidad" : "pediatra"
+  },
+  {
+    "id" : 3,
+    "nombre" : "Kobe",
+    "paterno" : "bryant",
+    "materno" : "Bean",
+    "email" : "kobe_09@hotmai.com",
+    "telefono" : "844-292-35-33",
+    "especialidad" : "Cardiologo"
+  }
+]
