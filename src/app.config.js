@@ -25,6 +25,7 @@ module.exports = function (ngApp){
 				abstract: true,
 				template: require('./app/main/main.html')
 			})
+			/* urls secretaria */
 				.state('main.secretaria',{
 					url: '/secretaria',
 					template: require('./app/main/secretaria/secretaria.html'),
@@ -38,18 +39,6 @@ module.exports = function (ngApp){
 						resolve: {
 							arrConsultas: function(ConsultaService){
 								return ConsultaService.getConsultas();
-							}
-						}
-					})
-
-					.state('main.secretaria.doctores',{
-						url: '/doctores',
-						template: require('./app/main/secretaria/doctores/listado/doctores.html'),
-						controller : 'DoctorCtrl',
-						controllerAs : 'vm',
-						resolve: {
-							arrDoctores: function(DoctorService){
-								return DoctorService.getDoctores();
 							}
 						}
 					})
@@ -68,9 +57,46 @@ module.exports = function (ngApp){
 						url: '/expediente',
 						template: require('./app/main/secretaria/expedientes/expedientes.html')
 					})
-				.state('main.doctor',{
-					url: '/doctor',
-					template: require('./app/main/doctor/doctor.html')
+				.state('main.secretaria.doctores',{
+					url: '/doctores',
+					template: require('./app/main/secretaria/doctores/listado/doctores.html'),
+					controller : 'DoctorCtrl',
+					controllerAs : 'vm',
+					resolve: {
+						arrDoctores: function(DoctorService){
+							return DoctorService.getDoctores();
+						}
+					}
 				})
+			/**************************/
+			/* urls doctor */
+			.state('main.doctor',{
+				url: '/doctor',
+				template: require('./app/main/doctor/doctor.html'),
+				controller: 'DoctorCtrl'
+			})
+			.state('main.doctor.consultas',{
+				url: '/consultas',
+				template: require('./app/main/components/consulta/listado/listado.html'),
+				controller:'ConsultaListadoCtrl',
+				controllerAs:'vm',
+				resolve: {
+					arrConsultas: function(ConsultaService){
+						return ConsultaService.getConsultas();
+					}
+				}
+			})
+			.state('main.doctor.pacientes',{
+				url: '/pacientes',
+				template: require('./app/main/components/pacientes/listado/listado.html'),
+				controller: 'PacientesListadoCtrl',
+				controllerAs: 'vm',
+				resolve: {
+					arrPacientes: function(PacienteService){
+						return PacienteService.getPacientes();
+					}
+				}
+			})
+
 	}
 }
