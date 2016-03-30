@@ -22,9 +22,20 @@
         <td>{{doctor.email}}</td>
         <td>{{doctor.telefono}}</td>
         <td>{{doctor.especialidad}}</td>
-        <td><i class="fa fa-money"></i> <i class="fa fa-pencil"></i></td>
+        <td>
+          <i class="fa fa-money"></i>
+          <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor;"></i>
+        </td>
       </tr>
     </tbody>
   </table>
-  <button class="btn btn-primary">Agregar Doctor</button>
+  <button class="btn btn-primary" ng-click="vm.formularioOpen = true; vm.doctorSelected=null;">Agregar Doctor</button>
+
+  <secretaria-doctor-formulario
+    ng-if="vm.formularioOpen"
+    open = "vm.formularioOpen"
+    doctor = "vm.doctorSelected"
+
+
+  ></secretaria-doctor-formulario>
 </section>
