@@ -2,8 +2,16 @@ module.exports = function(ngModule){
   ngModule.controller('PacienteFormularioCtrl',PacienteFormularioCtrl)
 
   /*@ngInject*/
-  function PacienteFormularioCtrl (){
+  function PacienteFormularioCtrl ($scope, getGravatarUrlBuilder){
     var vm = this;
+
+    /*gravatar with email*/
+    $scope.getGravatarUrl = function(email) {
+      console.log(email);
+      return getGravatarUrlBuilder.builderGravatarUrl(email);
+    }
+    /********************/
+
     vm.optionFormulario = {};
     vm.functionSelected = functionSelected;
 
