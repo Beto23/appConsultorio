@@ -1,8 +1,8 @@
 module.exports = function (ngModule){
 
-  ngModule.controller('DoctorCtrl',DoctorCtrl)
+  ngModule.controller('SecreDoctorCtrl',SecreDoctorCtrl)
   /* @ngInject */
-  function DoctorCtrl (arrDoctores){
+  function SecreDoctorCtrl (arrDoctores){
     var vm = this;
     vm.doctores = arrDoctores;
     console.log(arrDoctores);
