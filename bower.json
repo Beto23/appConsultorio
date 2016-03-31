@@ -1,0 +1,24 @@
+{
+  "name": "app-consultorio",
+  "description": "proyecto de la materia ambientes distribuidos consultorio medico",
+  "main": "index.js",
+  "authors": [
+    "Jose Alberto Cordoba Lugo"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Beto23/appConsultorio",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-i18n": "~1.5.3"
+  }
+}
