@@ -3,108 +3,73 @@ module.exports = function(ngModule){
 
   function HelpersFactory (){
     var Helper = {
-      twoTabs: function (){
-        console.log('factory 4');
-        var postConsulta = $('#postCnst');
-        var getConsulta = $('#getCnst');
+      menuSesion: function (){
+        var menu_item1 = $('#menu-item1');
+        var menu_item2 = $('#menu-item2');
+        var menu_item3 = $('#menu-item3');
+        var menu_item4 = $('#menu-item4');
+        var menu_item5 = $('#menu-item5');
 
-        getConsulta.click(function(){
-          $(this).addClass('active');
-          if (postConsulta.hasClass("active")) {
-            postConsulta.removeClass('active')
-          }else {
-            console.log('post desactivado');
-          }
-        })
-        postConsulta.click(function(){
-          $(this).addClass('active');
-          if (getConsulta.hasClass("active")) {
-            getConsulta.removeClass('active')
-          }else {
-            console.log('get desactivado');
-          }
-        })
-      },
-      forTabs: function (){
-        console.log('444');
-        var tab1 = $('#tab1');
-        var tab2 = $('#tab2');
-        var tab3 = $('#tab3');
-        var tab4 = $('#tab4');
-
-        tab1.click(function(){
-          $(this).addClass('active');
-          if (tab2.hasClass('active')) {
-            tab2.removeClass('active')
-          }else if (tab3.hasClass('active')) {
-            tab3.removeClass('active')
-          }else if (tab4.hasClass('active')) {
-            tab4.removeClass('active')
+        menu_item1.click(function(event){
+          $(this).addClass('active2');
+          if (menu_item2.hasClass('active2')) {
+            menu_item2.removeClass('active2');
+          }else if (menu_item3.hasClass('active2')) {
+            menu_item3.removeClass('active2');
+          }else if (menu_item4.hasClass('active2')) {
+            menu_item4.removeClass('active2');
+          }else if (menu_item5.hasClass('active2')) {
+            menu_item5.removeClass('active2');
           }
         });
-
-        tab2.click(function(){
-          $(this).addClass('active');
-          if (tab1.hasClass('active')) {
-            tab1.removeClass('active')
-          }else if (tab3.hasClass('active')) {
-            tab3.removeClass('active')
-          }else if (tab4.hasClass('active')) {
-            tab4.removeClass('active')
+        menu_item2.click(function(event){
+          $(this).addClass('active2');
+          if (menu_item1.hasClass('active2')) {
+            menu_item1.removeClass('active2');
+          }else if (menu_item3.hasClass('active2')) {
+          menu_item3.removeClass('active2');
+          }else if (menu_item4.hasClass('active2')) {
+            menu_item4.removeClass('active2');
+          }else if (menu_item5.hasClass('active2')) {
+            menu_item5.removeClass('active2');
           }
         });
-
-        tab3.click(function(){
-          $(this).addClass('active');
-          if (tab2.hasClass('active')) {
-            tab2.removeClass('active')
-          }else if (tab1.hasClass('active')) {
-            tab1.removeClass('active')
-          }else if (tab4.hasClass('active')) {
-            tab4.removeClass('active')
+        menu_item3.click(function(event){
+          $(this).addClass('active2');
+          if (menu_item2.hasClass('active2')) {
+            menu_item2.removeClass('active2');
+          }else if (menu_item1.hasClass('active2')) {
+            menu_item1.removeClass('active2');
+          }else if (menu_item4.hasClass('active2')) {
+            menu_item4.removeClass('active2');
+          }else if (menu_item5.hasClass('active2')) {
+            menu_item5.removeClass('active2');
           }
         });
-
-        tab4.click(function(){
-          $(this).addClass('active');
-          if (tab2.hasClass('active')) {
-            tab2.removeClass('active')
-          }else if (tab3.hasClass('active')) {
-            tab3.removeClass('active')
-          }else if (tab1.hasClass('active')) {
-            tab1.removeClass('active')
+        menu_item4.click(function(event){
+          $(this).addClass('active2');
+          if (menu_item2.hasClass('active2')) {
+            menu_item2.removeClass('active2');
+          }else if (menu_item3.hasClass('active2')) {
+            menu_item3.removeClass('active2');
+          }else if (menu_item1.hasClass('active2')) {
+            menu_item1.removeClass('active2');
+          }else if (menu_item5.hasClass('active2')) {
+            menu_item5.removeClass('active2');
           }
         });
-      },
-      menu_antecedentes: function (){
-        var menu_antecedentes1 = $('#menu_antecedentes1');
-        var menu_antecedentes2 = $('#menu_antecedentes2');
-        var menu_antecedentes3 = $('#menu_antecedentes3');
-
-        menu_antecedentes1.click(function(){
-          $(this).addClass('menu-active')
-          if (menu_antecedentes2.hasClass('menu-active')) {
-              menu_antecedentes2.removeClass('menu-active')
-          }else if (menu_antecedentes3.hasClass('menu-active')) {
-            menu_antecedentes3.removeClass('menu-active')
+        menu_item5.click(function(event){
+          $(this).addClass('active2');
+          if (menu_item2.hasClass('active2')) {
+            menu_item2.removeClass('active2');
+          }else if (menu_item3.hasClass('active2')) {
+            menu_item3.removeClass('active2');
+          }else if (menu_item4.hasClass('active2')) {
+            menu_item4.removeClass('active2');
+          }else if (menu_item1.hasClass('active2')) {
+            menu_item1.removeClass('active2');
           }
         });
-        menu_antecedentes2.click(function(){
-          $(this).addClass('menu-active')
-          if (menu_antecedentes1.hasClass('menu-active')) {
-              menu_antecedentes1.removeClass('menu-active')
-          }else if (menu_antecedentes3.hasClass('menu-active')) {
-            menu_antecedentes3.removeClass('menu-active')
-          }
-        })
-        menu_antecedentes3.click(function(){
-          $(this).addClass('menu-active')
-          if (menu_antecedentes1.hasClass('menu-active')) {
-              menu_antecedentes1.removeClass('menu-active')
-          }else if (menu_antecedentes2.hasClass('menu-active')) {
-            menu_antecedentes2.removeClass('menu-active')
-          }
-        })
 
       }
     }
