@@ -3,6 +3,7 @@ require ('angular-ui-router');
 require('angular-clock');
 window.$ = window.jQuery = require('jquery');
 window.moment = require('moment');
+require('angular-i18n/angular-locale_es-mx.js');
 require('../node_modules/bootstrap/dist/js/bootstrap.js')
 var app = angular.module('appConsultorio', [
   'ui.router',
