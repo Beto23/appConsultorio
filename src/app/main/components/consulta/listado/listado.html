@@ -19,7 +19,7 @@
             <td>{{paciente.paciente}}</td>
             <td>{{paciente.doctor}}</td>
             <td>{{paciente.hora}}</td>
-            <td>{{paciente.fecha}}</td>
+            <td>{{paciente.fecha | date:"fullDate"}}</td>
             <td>
               <i class="fa fa-ban"></i>
               <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOn = true;"></i>
