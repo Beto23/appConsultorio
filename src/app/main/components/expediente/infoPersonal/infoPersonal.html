@@ -1,6 +1,6 @@
 <div class="info-personal row between-xs">
   <div class="foto-expediente col-xs-2">
-    <img src="" alt="gravar image">
+    <img ng-src="{{getGravatarUrl(vm.paciente.email)}}" alt="gravar image">
   </div>
   <div action="" class="info-personal-form row col-xs-9">
     <div class="info-personal-form-uno col-xs-6">
@@ -51,7 +51,7 @@
       </div>
       <div class="form-group">
          <label>Correo</label>
-         <input type="email" require class="form-control" required id="exampleInputName2" placeholder="betoo@example.com">
+         <input type="email" require class="form-control" ng-model="vm.paciente.email" id="exampleInputName2" placeholder="betoo@example.com">
       </div>
     </div>
   </div>
