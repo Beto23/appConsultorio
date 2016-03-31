@@ -1,0 +1,69 @@
+<div class="container-paciente">
+  <div class="info-personal info-personal-secre row between-xs">
+    <div class="encabezado-addPaciente col-xs-12">
+      <h3><b>{{vm.optionFormulario.encabezadoTittle}}</b></h3>
+      <hr>
+    </div>
+    <div class="foto-expediente col-xs-2">
+      <img ng-src="{{getGravatarUrl(vm.paciente.correo)}}" alt="Gravatar Image">
+    </div>
+    <form action="" class="info-personal-form row col-xs-9">
+      <div class="info-personal-form-uno col-xs-6"  ng-disabled="vm.paciente">
+        <div class="form-group">
+         <label>Nombre</label>
+         <input type="text" value="{{vm.paciente.nombre}}" class="form-control" id="exampleInputName2" required placeholder="Nombre(s)">
+        </div>
+        <div class="form-group">
+          <label>Paterno</label>
+          <input type="text" value="{{vm.paciente.paterno}}" class="form-control" id="exampleInputName2" required placeholder="Paterno">
+        </div>
+        <div class="form-group">
+          <label>Materno</label>
+          <input type="text" value="{{vm.paciente.materno}}" class="form-control" id="exampleInputName2" required placeholder="Materno">
+        </div>
+        <div class="form-group">
+          <label>Fecha de Nacimiento</label>
+          <input type="date" class="form-control" value="{{vm.paciente.nacimiento}}" required id="exampleInputName2">
+        </div>
+        <div class="form-group">
+          <label>Genero</label>
+          <select class="form-control"  value="{{vm.paciente.genero}}" id="sel1" required>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select>
+        </div>
+        <div class="form-group">
+           <label>Curp</label>
+           <input type="text"  value="{{vm.paciente.curp}}" class="form-control" required id="exampleInputName2" placeholder="curp">
+        </div>
+      </div>
+      <div class="info-personal-form-dos col-xs-6">
+        <div class="form-group">
+         <label>Estado</label>
+         <input type="text"  value="{{vm.paciente.estado}}" class="form-control" required id="exampleInputName2">
+        </div>
+        <div class="form-group">
+         <label>Municipio</label>
+         <input type="text"  value="{{vm.paciente.municipio}}" class="form-control" required id="exampleInputName2">
+        </div>
+        <div class="form-group">
+         <label>Dirección</label>
+         <input type="text"  value="{{vm.paciente.direccion}}" class="form-control" required id="exampleInputName2">
+        </div>
+        <div class="form-group">
+           <label>Codigo Postal</label>
+           <input type="text"  value="{{vm.paciente.cp}}" class="form-control" required id="exampleInputName2" placeholder="cp">
+        </div>
+        <div class="form-group">
+           <label>Correo</label>
+           <input type="email"  value="{{vm.paciente.correo}}"  ng-model="vm.paciente.correo" require class="form-control" required id="exampleInputName2" placeholder="betoo@example.com">
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <hr>
+        <button class="btn btn-default" ng-click="vm.open = false;">Cancelar</button>
+        <button class="btn btn-primary" ng-click="vm.functionSelected();">{{vm.optionFormulario.buttonSubmit}}</button>
+      </div>
+    </form>
+  </div>
+</div>

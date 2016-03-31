@@ -1,0 +1,44 @@
+[
+  {
+    "id" : 1,
+    "nombre" : "Juana",
+    "paterno" : "Lugo",
+    "materno" : "Corpus",
+    "nacimiento" : "1994-08-27",
+    "genero" : "Masculino",
+    "curp" : "12km143o",
+    "estado" : "Coahuila",
+    "municipio" : "Saltillo",
+    "direccion" : "Adolfo lopes",
+    "cp" : "25125",
+    "correo" : "josee-45@hotmail.com"
+  },
+  {
+    "id" : 2,
+    "nombre" : "Giovanna Alejandra",
+    "paterno" : "Lucio",
+    "materno" : "Vazquez",
+    "nacimiento" : "1993-11-27",
+    "genero" : "Femenino",
+    "curp" : "dfsdfd",
+    "estado" : "Coahuila",
+    "municipio" : "Saltillo",
+    "direccion" : "Noviembre",
+    "cp" : "25346",
+    "correo" : "ale@hotmail.com"
+  },
+  {
+    "id" : 3,
+    "nombre" : "Carlos Eduardo",
+    "paterno" : "Cordoba",
+    "materno" : "Lugo",
+    "nacimiento" : "1990-02-23",
+    "genero" : "Masculino",
+    "curp" : "dsfd23rew",
+    "estado" : "Coahuila",
+    "municipio" : "Saltillo",
+    "direccion" : "Ramos",
+    "cp" : "34253",
+    "correo" : "corlug@hotmail.com"
+  }
+]

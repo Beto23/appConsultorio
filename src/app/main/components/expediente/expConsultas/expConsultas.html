@@ -1,10 +1,44 @@
-<div>
-    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-
-    <h4>Inline</h4>
-    <div style="display:inline-block; min-height:290px;">
-      <uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="inlineOptions"></uib-datepicker>
+<div class="consultas-expediente">
+  <div class="consultas-expediente-container row">
+    <div class="consultas-expediente-container-listaConsultas col-xs-6">
+      <h3>Lista Consultas</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Medico</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Alejandra</td>
+            <td>23/02/2016</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-
+    <div class="consultas-expediente-container-detalleConsulta col-xs-6">
+      <h3>Detalle de Consulta</h3>
+      <div class="consultas-expediente-container-detalleConsulta-opciones">
+        <div>
+          <h4>Motivo de consulta</h4>
+          <textarea disabled class="form-control" rows="3"></textarea>
+        </div>
+        <div>
+          <h4>Sintomas</h4>
+          <textarea disabled class="form-control" rows="3"></textarea>
+        </div>
+        <div>
+          <h4>Diagnostico</h4>
+          <textarea disabled class="form-control" rows="3"></textarea>
+        </div>
+        <div>
+          <h4>Medicamento Recetado</h4>
+          <textarea disabled class="form-control" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,11 +1,10 @@
 module.exports = function (ngModule){
-  ngModule.controller('SecretariaCtrl', SecretariaCtrl)
+  ngModule.controller('DoctorCtrl', DoctorCtrl)
   /*@ngInject*/
-  function SecretariaCtrl (HelpersFactory){
+  function DoctorCtrl (HelpersFactory){
 
     /*Funcionalidad de menu*/
     HelpersFactory.menuSesion();
-
 
   }
 }

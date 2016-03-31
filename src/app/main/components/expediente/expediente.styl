@@ -1,10 +1,10 @@
 .info-personal
-  figure
+  img
     width 10em
     height 10em
-    background-image url(https://scontent-lax3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1185631_627964767253159_486476512_n.jpg?_nc_eui=ARiD7kcNYtCYMBIXM5_eyrxKVN1ZJdZut9c6MtFenA4bdpDHVDPKKnewZUc0&oh=67f34b24779a1cdc666cd8c2a1d51b84&oe=57974FEC)
-    background-size 10em
+    background: red
     margin 0 0 1em 0
+    border: 3px solid
 
 .antecedentes-personales
   height 29em
@@ -32,3 +32,21 @@
       margin-bottom 1em
 .menu-active
   background #96B5F3
+
+.consultas-expediente
+  &-container
+    h3
+      text-align center
+      background-color: rgb(217, 217, 217)
+      padding: 1em
+      margin-bottom: 1em
+    &-detalleConsulta
+      &-opciones
+        div
+          h4
+            padding: .5em 0
+    &-listaConsultas
+      table
+        tbody
+          tr
+            cursor: pointer

@@ -1,0 +1,38 @@
+<section class="container-consultas">
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active" id="getCnst"><a ui-sref="main.secretaria.pacientes">Ver Pacientes</a></li>
+  </ul>
+  <section class="getPacientes">
+    <div class="container-get-consultas">
+      <table class="table table-hover container-get-consultas-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Paterno</th>
+            <th>Materno</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="paciente in vm.pacientes">
+            <td>{{paciente.id}}</td>
+            <td>{{paciente.nombre}}</td>
+            <td>{{paciente.paterno}}</td>
+            <td>{{paciente.materno}}</td>
+            <td>
+              <i class="fa fa-ban"></i>
+              <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOpen = true;"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-primary"  ng-click="vm.formularioOpen = true; vm.pacienteSelected = null;" name="button">Agregar Paciente</button>
+      <paciente-formulario
+        ng-if="vm.formularioOpen"
+        open="vm.formularioOpen"
+        paciente="vm.pacienteSelected"
+        ></paciente-formulario>
+    </div>
+  </section>
+</section>

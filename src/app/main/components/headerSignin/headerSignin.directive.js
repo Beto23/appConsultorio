@@ -4,7 +4,8 @@ module.exports = function(ngModule){
   function headerSignIn (){
     var directive = {
       restrict: 'E',
-      template: require('./headerSignin.html')
+      template: require('./headerSignin.html'),
+      controller: 'HeaderSesionCtrl'
     }
     return directive;
   }

@@ -10,11 +10,13 @@ var app = angular.module('appConsultorio', [
   'ui.bootstrap',
   'Helpers',
   'ds.clock',
+  'appConsultorio.service',
   'appConsultorio.home',
   'appConsultorio.login',
   'appConsultorio.main'
 ]);
 require('angular-ui-bootstrap');
+require('./services/services.module')();
 require('./app/home/home.module')();
 require('./helpers/helpers.module')();
 require('./app/main/main.module')();
