@@ -23,7 +23,7 @@
         <td>{{doctor.telefono}}</td>
         <td>{{doctor.especialidad}}</td>
         <td>
-          <i class="fa fa-money"></i>
+          <i class="fa fa-money"  ng-click="vm.formularioOn = true;"></i>
           <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor;"></i>
         </td>
       </tr>
@@ -38,4 +38,9 @@
 
 
   ></secretaria-doctor-formulario>
+
+  <corte-de-caja
+    ng-if = "vm.formularioOn"
+    on = "vm.formularioOn"
+  ></corte-de-caja>
 </section>

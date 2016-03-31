@@ -1,0 +1,63 @@
+<div class="container-postConsulta login-container-form row top-xs center-xs">
+  <form class="col-xs-7">
+    <div class="popup-encabezado row">
+      <h4 class="col-xs-11">Corte de Caja</h4>
+      <i class="fa fa-times" ng-click="vm.on = false;"></i>
+    </div>
+    <div class="row between-xs form-inputs">
+      <div class="col-xs-11">
+        <div class="form-group">
+          <label for="">Fecha</label>
+          <p class="input-group">
+            <input type="text"
+              class="form-control"
+              ng-model="vm.dateInDatePicker"
+              uib-datepicker-popup="dd-MMMM-yyyy"
+              is-open="vm.datePickerOn"
+              ng-required="true" close-text="Close" />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="vm.datePickerOn = true;"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+          </p>
+          <table class="table table-striped table-corte">
+            <thead>
+              <tr>
+                <th>Doctor</th>
+                <th>Fecha de Consulta</th>
+                <th>Total de Consulta</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td><b>Total</b></td>
+                <td><b>$300</b></td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Jose Cordoba Lugo</td>
+                <td>24-marzo-2016</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>Jose Cordoba Lugo</td>
+                <td>24-marzo-2016</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>Jose Cordoba Lugo</td>
+                <td>24-marzo-2016</td>
+                <td>$100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-buttons">
+      <button class="btn btn-default" ng-click="vm.on = false;">Cancelar</button>
+      <button class="btn btn-primary">Aceptar</button>
+    </div>
+  </form>
+</div>
