@@ -9,11 +9,11 @@ module.exports = function(ngModule){
     vm.optionFormulario = {};
     vm.functionSelected = functionSelected;
 
-    vm.dateInDatePicker = moment(vm.paciente.fecha).toDate();
 
 
 
     if(vm.paciente){
+      vm.dateInDatePicker = moment(vm.paciente.fecha).toDate();
       vm.optionFormulario.buttonSubmit = 'Editar'
       vm.optionFormulario.encabezadoTittle = 'Editar Consulta'
     } else {
