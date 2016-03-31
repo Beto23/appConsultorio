@@ -29,12 +29,16 @@
         <div class="form-group">
           <label for="">Fecha</label>
           <p class="input-group">
-            <input type="text" class="form-control" value="{{vm.paciente.fecha}}" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+            <input type="text" 
+              class="form-control"
+              ng-model="vm.dateInDatePicker" 
+              uib-datepicker-popup="dd-MMMM-yyyy"
+              is-open="vm.datePickerOn"
+              ng-required="true" close-text="Close" />
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+              <button type="button" class="btn btn-default" ng-click="vm.datePickerOn = true;"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
           </p>
-          <input type="date" value="{{vm.paciente.fecha}}" class="form-control" required>
         </div>
         <div class="form-group">
           <label for="">Hora</label>
