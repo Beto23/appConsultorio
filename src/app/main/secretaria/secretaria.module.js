@@ -5,6 +5,9 @@ module.exports = function (){
   require('./doctores/listado/doctores.controller')(secretaria);
   require('./doctores/formulario/formulario.controller')(secretaria);
   require('./doctores/formulario/formulario.directive')(secretaria);
+  require('./doctores/corte/corte.directive')(secretaria);
+  require('./doctores/corte/corte.controller')(secretaria);
+
 
 
 
