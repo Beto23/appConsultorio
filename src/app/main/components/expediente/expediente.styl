@@ -15,7 +15,6 @@
       background: #E9EAED
     ul
       li
-        cursor pointer
         transition all .5s ease
       li:hover
         background #96B5F3
@@ -52,13 +51,28 @@
             cursor: pointer
 
 .expediente-medico
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 3em;
+  background: rgba(0, 0, 0, 0.83);
   &-container
+    .expediente-close
+      background: #fff
+      text-align: end
+      i
+        padding: .5em
     .title-exp
       padding: .5em
       font-size: 1.3em
       text-align: center;
     form
+      background: white
       padding: 1em !important
+      max-height: 34em;
+      overflow: auto
       .sub-title
         padding: 1em;
         background: #0157A0;
