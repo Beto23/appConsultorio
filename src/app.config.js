@@ -53,10 +53,6 @@ module.exports = function (ngApp){
 							}
 						}
 					})
-					.state('main.secretaria.expedientes',{
-						url: '/expediente',
-						template: require('./app/main/secretaria/expedientes/expedientes.html')
-					})
 				.state('main.secretaria.doctores',{
 					url: '/doctores',
 					template: require('./app/main/secretaria/doctores/listado/doctores.html'),
