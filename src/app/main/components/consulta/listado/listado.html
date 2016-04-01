@@ -24,6 +24,7 @@
               <i class="fa fa-ban"></i>
               <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOn = true;"></i>
               <i class="fa fa-plus-square" ng-click="vm.formularioOpen = true;"></i>
+              <i class="fa fa-file-text" ng-click="vm.formularioOpen2 = true;"></i>
             </td>
           </tr>
         </tbody>
@@ -39,4 +40,10 @@
   <detalle-consulta
     ng-if="vm.formularioOpen"
     open="vm.formularioOpen"></detalle-consulta>
+
+    <expediente-medico
+      ng-if = "vm.formularioOpen2"
+      open2 = 'vm.formularioOpen2'
+
+    ></expediente-medico>
 </section>

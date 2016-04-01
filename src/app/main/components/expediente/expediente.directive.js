@@ -5,6 +5,9 @@ module.exports = function (ngModule){
   function expedienteMedico (){
     var directive = {
       restrict: 'E',
+      scope: {
+        open2: '='
+      },
       template: require('./expediente.html')
     }
     return directive;
