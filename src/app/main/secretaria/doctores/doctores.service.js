@@ -15,7 +15,7 @@ module.exports = function (ngModule){
       var doctor = angular.fromJson(doctor);
 
       $http
-        .get(URL.API + 'getDoctores.json')
+        .get(URL.API + 'getEspecialidadByDoctores')
         .success(function(res) {
           deferred.resolve(res);
         })
