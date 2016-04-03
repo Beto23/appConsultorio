@@ -61,9 +61,6 @@ module.exports = function (ngApp){
 					resolve: {
 						arrDoctores: function(DoctorService){
 							return DoctorService.getDoctores();
-						},
-						pushDoctores:function(DoctorService){
-							return DoctorService.addDoctor(doctor)
 						}
 					}
 				})
