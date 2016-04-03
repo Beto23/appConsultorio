@@ -5,7 +5,6 @@ module.exports = function (ngModule){
   /* @ngInject */
 
   function corteDeCaja (){
-    console.log('caja');
     var directive = {
       restrict: 'E',
       scope:{

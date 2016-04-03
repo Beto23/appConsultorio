@@ -5,6 +5,5 @@ module.exports = function (ngModule){
   function SecreDoctorCtrl (arrDoctores){
     var vm = this;
     vm.doctores = arrDoctores;
-    console.log(arrDoctores);
   }
 }
