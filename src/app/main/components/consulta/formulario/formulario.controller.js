@@ -12,8 +12,8 @@ module.exports = function(ngModule){
 
 
 
-    if(vm.paciente){
-      vm.dateInDatePicker = moment(vm.paciente.fecha).toDate();
+    if(vm.consulta){
+      vm.dateInDatePicker = moment(vm.consulta.fecha_consulta).toDate();
       vm.optionFormulario.buttonSubmit = 'Editar'
       vm.optionFormulario.encabezadoTittle = 'Editar Consulta'
     } else {
@@ -23,7 +23,7 @@ module.exports = function(ngModule){
 
 
     function functionSelected(){
-      if(vm.paciente){
+      if(vm.consulta){
         editarConsulta();
       } else {
         agregarConsulta();

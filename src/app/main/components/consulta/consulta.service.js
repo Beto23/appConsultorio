@@ -15,12 +15,14 @@ module.exports = function (ngModule){
       var administrador = angular.fromJson(administrador);
 
       $http
-        .get(URL.API + 'getConsultas.json')
+        .get(URL.API + 'getAllConsultas')
         .success(function(res) {
+          //console.log(res);
           deferred.resolve(res);
         })
-        .catch(function(err) {
-          deferred.reject(err);
+        .catch(function(res) {
+          //console.log(res);
+          deferred.reject(res);
         });
 
       return deferred.promise;
