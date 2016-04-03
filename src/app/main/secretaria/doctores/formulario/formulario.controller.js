@@ -2,8 +2,9 @@ module.exports = function (ngModule){
 
   ngModule.controller('SecreDrCtrl', SecreDrCtrl)
   /* @ngInject */
-  function SecreDrCtrl (){
-    var vm = this;
+  function SecreDrCtrl (pushDoctores){
+   var vm = this;
+   vm.doctor = {};// agregarDoctor
    vm.optionFormulario = {};
    vm.functionSelected = functionSelected;
 
