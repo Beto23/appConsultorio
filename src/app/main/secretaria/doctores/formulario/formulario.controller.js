@@ -2,7 +2,7 @@ module.exports = function (ngModule){
 
   ngModule.controller('SecreDrCtrl', SecreDrCtrl)
   /* @ngInject */
-  function SecreDrCtrl (){
+  function SecreDrCtrl (DoctorService){
    var vm = this;
    vm.optionFormulario = {};
    vm.functionSelected = functionSelected;
@@ -18,11 +18,33 @@ module.exports = function (ngModule){
 
 
    function functionSelected(){
-     if(vm.doctor){
+     if(vm.optionFormulario.buttonSubmit == "Editar"){
        editarDoctor();
      } else {
-       agregarDoctor();
+       vm.addDoctor();
      }
+   }
+
+   vm.addDoctor = function(){
+     console.log("agregando doctor");
+     DoctorService.postDoctores(vm.doctor)
+      .then(function(response){
+         console.log(vm.doctor);
+         console.log(response);
+         vm.doctores.push(response)
+         //helper.popupClose();
+         //$state.reload()
+         if(response.estatus == 'ok'){
+           console.log('doctor agregado');
+           //$state.reload()
+         } else {
+           console.log(response.msj);
+         }
+       }).catch(function(err){
+         console.log(err)
+         console.log('error');
+
+       });
    }
 
    function editarDoctor(){
@@ -31,6 +53,24 @@ module.exports = function (ngModule){
 
    function agregarDoctor(){
      console.log('agregarDoctor');
+     vm.addDoctor = function(){
+ 			console.log("agregando doctor");
+ 			DoctorService.getDoctores(vm.doctor)
+        .then(function(response){
+   				vm.doctores.push(response)
+   				//helper.popupClose();
+   				//$state.reload()
+   				if(response.estatus == 'ok'){
+   					console.log('doctor agregado');
+   					//$state.reload()
+   				} else {
+   					console.log(response.msj);
+   				}
+   			}).catch(function(err){
+   				console.log(err)
+   			});
+ 		}
    }
+
   }
 }
