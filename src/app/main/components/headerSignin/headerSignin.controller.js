@@ -3,7 +3,6 @@ module.exports = function (ngModule){
   ngModule.controller('HeaderSesionCtrl', HeaderSesionCtrl)
   /* @ngInject */
   function HeaderSesionCtrl ($scope){
-    console.log('nayeli<3');
     /*Funcionalidad boton desplegable*/
     var btn_menu = $('#menu-consulta');
 

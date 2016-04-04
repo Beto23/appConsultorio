@@ -15,14 +15,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="paciente in vm.pacientes">
-            <td>{{paciente.paciente}}</td>
-            <td>{{paciente.doctor}}</td>
-            <td>{{paciente.hora}}</td>
-            <td>{{paciente.fecha | date:"fullDate"}}</td>
+          <tr ng-repeat="consulta in vm.consultas">
+            <td>{{consulta.nombre_pac}} {{consulta.paterno_pac}} {{consulta.materno_pac}}</td>
+            <td>{{consulta.nombre_doc}} {{consulta.paterno_doc}} {{consulta.materno_doc}}</td>
+            <td>{{consulta.hora}}</td>
+            <td>{{consulta.fecha_consulta | date:"fullDate"}}</td>
             <td>
               <i class="fa fa-ban"></i>
-              <i class="fa fa-pencil" ng-click="vm.pacienteSelected=paciente; vm.formularioOn = true;"></i>
+              <i class="fa fa-pencil" ng-click="vm.consultaSelected=consulta; vm.formularioOn = true;"></i>
               <i class="fa fa-plus-square" ng-click="vm.formularioOpen = true;"></i>
               <i class="fa fa-file-text" ng-click="vm.formularioOpen2 = true;"></i>
             </td>
@@ -31,11 +31,11 @@
       </table>
     </div>
   </div>
-  <button type="button" class="btn btn-primary" name="button" ng-click="vm.formularioOn = true; vm.pacienteSelected = null;">Agregar nueva consulta</button>
+  <button type="button" class="btn btn-primary" name="button" ng-click="vm.formularioOn = true; vm.consultaSelected = null;">Agregar nueva consulta</button>
   <consulta-formulario
     ng-if="vm.formularioOn"
     on="vm.formularioOn"
-    paciente="vm.pacienteSelected"></consulta-formulario>
+    consulta="vm.consultaSelected"></consulta-formulario>
 
   <detalle-consulta
     ng-if="vm.formularioOpen"

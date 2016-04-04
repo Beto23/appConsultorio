@@ -4,6 +4,6 @@ module.exports = function(ngModule){
   /*@ngInject*/
   function ConsultaListadoCtrl (arrConsultas){
     var vm = this;
-    vm.pacientes = arrConsultas;
+    vm.consultas = arrConsultas;
   }
 }

@@ -7,7 +7,7 @@ module.exports = function (ngModule){
       restrict : 'E',
       scope: {
         on: '=',
-        paciente: '='
+        consulta: '='
       },
       template: require('./formulario.html'),
       bindToController : true,

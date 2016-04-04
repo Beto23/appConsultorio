@@ -5,58 +5,62 @@
       <hr>
     </div>
     <div class="foto-expediente col-xs-2">
-      <img ng-src="{{getGravatarUrl(vm.paciente.correo)}}" alt="Gravatar Image">
+      <img ng-src="{{getGravatarUrl(vm.paciente.correo_pac)}}" alt="Gravatar Image">
     </div>
-    <form action="" class="info-personal-form row col-xs-9">
+    <form action="" class="info-personal-form row col-xs-9 css-form">
       <div class="info-personal-form-uno col-xs-6"  ng-disabled="vm.paciente">
         <div class="form-group">
          <label>Nombre</label>
-         <input type="text" value="{{vm.paciente.nombre}}" class="form-control" id="exampleInputName2" required placeholder="Nombre(s)">
+         <input type="text" maxlength="40" value="" ng-model="vm.paciente.nombre_pac" class="form-control"  required placeholder="Nombre(s)">
         </div>
         <div class="form-group">
           <label>Paterno</label>
-          <input type="text" value="{{vm.paciente.paterno}}" class="form-control" id="exampleInputName2" required placeholder="Paterno">
+          <input type="text" maxlength="40" value="" ng-model="vm.paciente.paterno_pac" class="form-control"  required placeholder="Paterno">
         </div>
         <div class="form-group">
           <label>Materno</label>
-          <input type="text" value="{{vm.paciente.materno}}" class="form-control" id="exampleInputName2" required placeholder="Materno">
+          <input type="text" maxlength="40" value="" ng-model="vm.paciente.materno_pac" class="form-control"  required placeholder="Materno">
         </div>
         <div class="form-group">
           <label>Fecha de Nacimiento</label>
-          <input type="date" class="form-control" value="{{vm.paciente.nacimiento}}" required id="exampleInputName2">
+          <input type="date" class="form-control" value="" ng-model="vm.paciente.fecha_nacimiento" required >
         </div>
         <div class="form-group">
           <label>Genero</label>
-          <select class="form-control"  value="{{vm.paciente.genero}}" id="sel1" required>
+          <select class="form-control"  value="" ng-model="vm.paciente.sexo" id="sel1" required>
             <option>Masculino</option>
             <option>Femenino</option>
           </select>
         </div>
         <div class="form-group">
            <label>Curp</label>
-           <input type="text"  value="{{vm.paciente.curp}}" class="form-control" required id="exampleInputName2" placeholder="curp">
+           <input type="text" maxlength="18" minlength="18"  value="" ng-model="vm.paciente.curp" class="form-control" required  placeholder="curp">
         </div>
       </div>
       <div class="info-personal-form-dos col-xs-6">
         <div class="form-group">
          <label>Estado</label>
-         <input type="text"  value="{{vm.paciente.estado}}" class="form-control" required id="exampleInputName2">
+         <input type="text" maxlength="20"  value="" ng-model="vm.paciente.estado" class="form-control" required >
         </div>
         <div class="form-group">
          <label>Municipio</label>
-         <input type="text"  value="{{vm.paciente.municipio}}" class="form-control" required id="exampleInputName2">
+         <input type="text" maxlength="40"  value="" ng-model="vm.paciente.municipio" class="form-control" required >
         </div>
         <div class="form-group">
          <label>Dirección</label>
-         <input type="text"  value="{{vm.paciente.direccion}}" class="form-control" required id="exampleInputName2">
+         <input type="text" maxlength="40"  value="" ng-model="vm.paciente.direccion" class="form-control" required >
         </div>
         <div class="form-group">
            <label>Codigo Postal</label>
-           <input type="text"  value="{{vm.paciente.cp}}" class="form-control" required id="exampleInputName2" placeholder="cp">
+           <input type="text" maxlength="5" minlength="5"  value="" ng-model="vm.paciente.cp" class="form-control" required  placeholder="cp">
         </div>
         <div class="form-group">
            <label>Correo</label>
-           <input type="email"  value="{{vm.paciente.correo}}"  ng-model="vm.paciente.correo" require class="form-control" required id="exampleInputName2" placeholder="betoo@example.com">
+           <input type="email" maxlength="50" value="{{vm.paciente.correo_pac}}"  ng-model="vm.paciente.correo_pac" required class="form-control" placeholder="betoo@example.com">
+        </div>
+        <div class="form-group">
+           <label>Telefono</label>
+           <input type="text" maxlength="12" ng-model="vm.paciente.telefono_pac" required class="form-control" placeholder="betoo@example.com">
         </div>
       </div>
       <div class="col-xs-12">

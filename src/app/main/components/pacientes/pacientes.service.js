@@ -15,7 +15,7 @@ module.exports = function (ngModule){
       var secretaria = angular.fromJson(secretaria);
 
       $http
-        .get(URL.API + 'getPacientes.json')
+        .get(URL.API + 'getPacientes')
         .success(function(res) {
           deferred.resolve(res);
         })
