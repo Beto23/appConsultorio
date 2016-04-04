@@ -18,7 +18,7 @@ module.exports = function (ngModule){
 
 
    function functionSelected(){
-     if(vm.optionFormulario.buttonSubmit == "Editar"){
+     if(vm.tipo == 'edit'){
        editarDoctor();
      } else {
        vm.addDoctor();
@@ -32,11 +32,9 @@ module.exports = function (ngModule){
          console.log(vm.doctor);
          console.log(response);
          vm.doctores.push(response)
-         //helper.popupClose();
-         //$state.reload()
+
          if(response.estatus == 'ok'){
            console.log('doctor agregado');
-           //$state.reload()
          } else {
            console.log(response.msj);
          }
@@ -51,26 +49,6 @@ module.exports = function (ngModule){
      console.log('editarDoctor');
    }
 
-   function agregarDoctor(){
-     console.log('agregarDoctor');
-     vm.addDoctor = function(){
- 			console.log("agregando doctor");
- 			DoctorService.getDoctores(vm.doctor)
-        .then(function(response){
-   				vm.doctores.push(response)
-   				//helper.popupClose();
-   				//$state.reload()
-   				if(response.estatus == 'ok'){
-   					console.log('doctor agregado');
-   					//$state.reload()
-   				} else {
-   					console.log(response.msj);
-   				}
-   			}).catch(function(err){
-   				console.log(err)
-   			});
- 		}
-   }
 
   }
 }

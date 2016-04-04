@@ -7,7 +7,8 @@ module.exports = function (ngModule){
       restrict : 'E',
       scope:{
         open: '=',
-        doctor: '='
+        doctor: '=',
+        tipo: '='
       },
       template: require('./formulario.html'),
       bindToController : true,

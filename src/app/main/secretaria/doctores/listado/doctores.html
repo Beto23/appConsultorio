@@ -24,17 +24,21 @@
         <td>{{doctor.especialidad}}</td>
         <td>
           <i class="fa fa-money"  ng-click="vm.formularioOn = true;"></i>
-          <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor;"></i>
+          <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor; vm.tipo='edit';"></i>
         </td>
       </tr>
     </tbody>
   </table>
-  <button class="btn btn-primary" ng-click="vm.formularioOpen = true; vm.doctorSelected=null;">Agregar Doctor</button>
+  <button class="btn btn-primary" ng-click="vm.formularioOpen = true; vm.doctorSelected=null; vm.tipo='add';">Agregar Doctor</button>
 
   <secretaria-doctor-formulario
     ng-if="vm.formularioOpen"
     open = "vm.formularioOpen"
     doctor = "vm.doctorSelected"
+    tipo = "vm.tipo"
+
+
+
 
 
   ></secretaria-doctor-formulario>
