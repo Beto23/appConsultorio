@@ -7,6 +7,7 @@ module.exports = function (ngModule){
    vm.optionFormulario = {};
    vm.functionSelected = functionSelected;
    vm.especialidades = [];
+   vm.doctores = [];
 
    if(vm.doctor){
      vm.optionFormulario.buttonSubmit = 'Editar';
@@ -26,12 +27,12 @@ module.exports = function (ngModule){
 
    function functionSelected(){
      if(vm.tipo == 'edit'){
-       editarDoctor();
+       vm.updateDoctor();
      } else {
        vm.addDoctor();
      }
    }
-
+   //Función para agregar un doctor
    vm.addDoctor = function(){
      console.log("agregando doctor");
      DoctorService.postDoctores(vm.doctor)
@@ -50,6 +51,21 @@ module.exports = function (ngModule){
          console.log('error');
 
        });
+   };
+
+   //Función para editar doctor
+   vm.updateDoctor = function(){
+     console.log(vm.doctor);
+     DoctorService.putDoctor(vm.doctor)
+      .then(function(response){
+        if (response == "ok") {
+          console.log(response.msj);
+        }else {
+          console.log(response.msj);
+        }
+      }).catch(function(err){
+        console.log(err);
+      });
    };
 
    function editarDoctor(){

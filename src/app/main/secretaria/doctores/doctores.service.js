@@ -1,20 +1,19 @@
 module.exports = function (ngModule){
-  ngModule.factory("DoctorService", DoctorService)
+  ngModule.factory("DoctorService", DoctorService);
 
   /*@ngInject*/
   function DoctorService ($q,$http,URL){
     var services = {
       getDoctores : getDoctores,
       getEspecialidades : getEspecialidades,
-      postDoctores : postDoctores
-    }
+      postDoctores : postDoctores,
+      putDoctor : putDoctor
+    };
     return services;
 
     /******** get doctores *******/
     function getDoctores(){
       var deferred = $q.defer();
-
-      var doctor = angular.fromJson(doctor);
 
       $http
         .get(URL.API + 'getEspecialidadByDoctores')
@@ -29,14 +28,12 @@ module.exports = function (ngModule){
     }
     /***********************/
 
-    /******** get doctores *******/
+    /******** get especialidades *******/
     function getEspecialidades(){
       var deferred = $q.defer();
-      var especialidad = angular.fromJson(especialidad);
       $http
         .get(URL.API + 'getEspecialidades')
         .success(function(res) {
-          console.log(res );
           deferred.resolve(res);
         })
         .catch(function(err) {
@@ -64,6 +61,24 @@ module.exports = function (ngModule){
 
 			return deferred.promise;
     }
+
+    function putDoctor(req){
+			var deferred = $q.defer();
+			var req = angular.fromJson(req);
+
+			$http
+				.put(URL.API + 'putDoctor', req)
+				.success(function(res) {
+					//console.log(res);
+					deferred.resolve(res);
+				})
+				.catch(function(res) {
+					//console.log(res);
+					deferred.reject(res);
+				});
+
+			return deferred.promise;
+		}
 
   }
 }
