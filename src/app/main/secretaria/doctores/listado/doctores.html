@@ -2,34 +2,37 @@
   <ul class="nav nav-tabs">
     <li role="presentation" class="active" id="getCnst"><a href="">Doctores</a></li>
   </ul>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Nombre</th>
-        <th>Apeidos</th>
-        <th>Email</th>
-        <th>Telefono</th>
-        <th>Especialidad</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="doctor in vm.doctores">
-        <td>{{doctor.id_doctor}}</td>
-        <td>{{doctor.nombre_doc}}</td>
-        <td>{{doctor.paterno_doc}} {{doctor.materno_doc}}</td>
-        <td>{{doctor.correo_doc}}</td>
-        <td>{{doctor.telefono_doc}}</td>
-        <td>{{doctor.especialidad}}</td>
-        <td>
-          <i class="fa fa-ban" ng-click="vm.warningOpen = true; vm.delete='doc'; vm.doctorDelete=doctor;"></i>
-          <i class="fa fa-money"  ng-click="vm.formularioOn = true;"></i>
-          <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor; vm.tipo='edit';"></i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container-tabla">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apeidos</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Especialidad</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="doctor in vm.doctores">
+          <td>{{doctor.id_doctor}}</td>
+          <td>{{doctor.nombre_doc}}</td>
+          <td>{{doctor.paterno_doc}} {{doctor.materno_doc}}</td>
+          <td>{{doctor.correo_doc}}</td>
+          <td>{{doctor.telefono_doc}}</td>
+          <td>{{doctor.especialidad}}</td>
+          <td>
+            <i class="fa fa-ban" ng-click="vm.warningOpen = true; vm.delete='doc'; vm.doctorDelete=doctor;"></i>
+            <i class="fa fa-money"  ng-click="vm.formularioOn = true;"></i>
+            <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor; vm.tipo='edit';"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <button class="btn btn-primary" ng-click="vm.formularioOpen = true; vm.doctorSelected=null; vm.tipo='add';">Agregar Doctor</button>
 
   <secretaria-doctor-formulario
