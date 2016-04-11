@@ -2,12 +2,13 @@ module.exports = function (ngModule){
 
   ngModule.controller('SecreDrCtrl', SecreDrCtrl);
   /* @ngInject */
-  function SecreDrCtrl (DoctorService){
+  function SecreDrCtrl (DoctorService, $scope, $compile, $state){
    var vm = this;
    vm.optionFormulario = {};
    vm.functionSelected = functionSelected;
    vm.especialidades = [];
    vm.doctores = [];
+   var body = angular.element(document).find('body');
 
    if(vm.doctor){
      vm.optionFormulario.buttonSubmit = 'Editar';
@@ -43,6 +44,9 @@ module.exports = function (ngModule){
 
          if(response.estatus == 'ok'){
            console.log('doctor agregado');
+           vm.open = false;
+           $state.reload();
+           body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
          } else {
            console.log(response.msj);
          }
@@ -58,8 +62,11 @@ module.exports = function (ngModule){
      console.log(vm.doctor);
      DoctorService.putDoctor(vm.doctor)
       .then(function(response){
-        if (response == "ok") {
-          console.log(response.msj);
+        if (response.estatus == "ok") {
+          console.log('update');
+          vm.open = false;
+          $state.reload();
+          body.append($compile("<alert-succes correcto='"+ response.msj +"'></alert-succes>")($scope));
         }else {
           console.log(response.msj);
         }

@@ -2,10 +2,12 @@ module.exports = function (ngModule) {
   ngModule
     .controller('WarningCtrl',WarningCtrl);
 
-    function WarningCtrl(DoctorService) {
+    /* @ngInject  */
+    function WarningCtrl(DoctorService, $scope, $compile, $state){
       var vm = this;
       vm.functionSelected = functionSelected;
       vm.msjWarning = "";
+      var body = angular.element(document).find('body');
 
       if (vm.delete == "doc") {
         vm.msjWarning = "¿Estas seguro que quieres eliminar el doctor? una vez borrado no se podrá recuperar";
@@ -25,6 +27,9 @@ module.exports = function (ngModule) {
             console.log(response);
             if (response.estatus == "ok") {
                 console.log('doctor eliminado');
+                vm.warning = false;
+                $state.reload();
+                body.append($compile("<alert-succes alertSucc='"+ vm.alertSucc  +"' vm.alertSucc='"+ true  +"'  ng-if='"+ vm.alertSucc  +"'  correcto='"+ response.msj +"'></alert-succes>")($scope));
             }else {
               console.log(response.msj);
             }

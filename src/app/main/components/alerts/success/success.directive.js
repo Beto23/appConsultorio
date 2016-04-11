@@ -5,8 +5,14 @@ module.exports = function (ngModule) {
     function alertSucces() {
       var directive = {
         restrict: 'E',
+        scope:{
+          alertSucc: "=",
+          correcto: "@"
+        },
+        bindToController : true,
         template: require('./success.html'),
-        controller: 'SuccessCtrl'
+        controller: 'SuccessCtrl',
+        controllerAs : 'vm'
       };
       return directive;
     }
