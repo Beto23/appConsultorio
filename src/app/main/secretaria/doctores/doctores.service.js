@@ -7,7 +7,8 @@ module.exports = function (ngModule){
       getDoctores : getDoctores,
       getEspecialidades : getEspecialidades,
       postDoctores : postDoctores,
-      putDoctor : putDoctor
+      putDoctor : putDoctor,
+      deleteDoctor:deleteDoctor
     };
     return services;
 
@@ -80,5 +81,22 @@ module.exports = function (ngModule){
 			return deferred.promise;
 		}
 
+    function deleteDoctor(doctorId){
+			var deferred = $q.defer();
+			var doctorId = angular.fromJson(doctorId);
+
+			$http
+				.delete(URL.API + 'deleteDoctor', {data: doctorId})
+				.success(function(res) {
+					deferred.resolve(res);
+				})
+				.catch(function(res) {
+					console.log(res);
+					deferred.reject(res);
+				});
+
+			return deferred.promise;
+		}
+
   }
-}
+};

@@ -23,6 +23,7 @@
         <td>{{doctor.telefono_doc}}</td>
         <td>{{doctor.especialidad}}</td>
         <td>
+          <i class="fa fa-ban" ng-click="vm.warningOpen = true; vm.delete='doc'; vm.doctorDelete=doctor;"></i>
           <i class="fa fa-money"  ng-click="vm.formularioOn = true;"></i>
           <i class="fa fa-pencil" ng-click="vm.formularioOpen = true; vm.doctorSelected=doctor; vm.tipo='edit';"></i>
         </td>
@@ -36,12 +37,15 @@
     open = "vm.formularioOpen"
     doctor = "vm.doctorSelected"
     tipo = "vm.tipo"
-
-
-
-
-
   ></secretaria-doctor-formulario>
+
+  <alert-warning
+    ng-if="vm.warningOpen"
+    warning = "vm.warningOpen"
+    delete = "vm.delete"
+    user = "vm.doctorDelete"
+
+  ></alert-warning>
 
   <corte-de-caja
     ng-if = "vm.formularioOn"

@@ -5,8 +5,15 @@ module.exports = function (ngModule) {
     function alertWarning() {
       var directive = {
         restrict: 'E',
+        scope:{
+          delete: "=",
+          user: "=",
+          warning: "="
+        },
+        bindToController : true,
         template: require('./warning.html'),
-        controller: 'WarningCtrl'
+        controller: 'WarningCtrl',
+        controllerAs : 'vm'
       };
       return directive;
     }
