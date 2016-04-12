@@ -1,13 +1,13 @@
 module.exports = function (ngModule) {
   ngModule
     .controller('SuccessCtrl',SuccessCtrl);
-
-    function SuccessCtrl() {
+    /*@ngInject*/
+    function SuccessCtrl($scope) {
       var vm = this;
-      vm.ocultar = ocultar;
-      function ocultar (){
-        console.log('ocultando');
-        vm.hide = true;
-      }
+      var self = vm;
+      setTimeout(function(){
+        self.isAlertOn=false;
+        $scope.$apply()
+      },1000)
     }
 };

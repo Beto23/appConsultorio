@@ -6,8 +6,8 @@ module.exports = function (ngModule) {
       var directive = {
         restrict: 'E',
         scope:{
-          alertSucc: "=",
-          correcto: "@"
+          isAlertOn: "=",
+          msjAlert: "@"
         },
         bindToController : true,
         template: require('./success.html'),
