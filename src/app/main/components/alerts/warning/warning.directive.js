@@ -6,9 +6,8 @@ module.exports = function (ngModule) {
       var directive = {
         restrict: 'E',
         scope:{
-          delete: "=",
-          user: "=",
-          warning: "="
+          functionToInvoke: "&",
+          msjWarning: "@"
         },
         bindToController : true,
         template: require('./warning.html'),

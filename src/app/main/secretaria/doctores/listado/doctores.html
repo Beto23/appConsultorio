@@ -43,11 +43,9 @@
   ></secretaria-doctor-formulario>
 
   <alert-warning
-    ng-if="vm.warningOpen"
-    warning = "vm.warningOpen"
-    delete = "vm.delete"
-    user = "vm.doctorDelete"
-
+    ng-if="true"
+    msj-warning="¿Estas seguro que quieres eliminar el doctor? una vez borrado no se podrá recuperar?"
+    function-to-invoke="vm.borrarDoctor(vm.doctorDelete)"
   ></alert-warning>
 
   <corte-de-caja
